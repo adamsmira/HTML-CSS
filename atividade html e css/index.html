@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitação de Férias</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+        .container {
+            width: 700px;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #4a90e2;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .status {
+            background-color: #00a65a;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-size: 1em;
+            text-align: center;
+        }
+        .section {
+            margin-bottom: 35px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 12px;
+        }
+        input[type="text"], input[type="date"], input[type="number"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: #fff;
+        }
+        .input-group {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .checkbox-group input {
+            margin-right: 12px;
+        }
+        .checkbox-group label {
+            font-weight: normal;
+            color: #555;
+        }
+        .notice {
+            font-size: 1em;
+            color: #555;
+            padding: 15px;
+            background-color: #f0f8ff;
+            border-left: 6px solid #4a90e2;
+            border-radius: 4px;
+            margin-top: 30px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <span>Solicitação de Férias</span>
+            <div class="status">Solicitando</div>
+        </div>
+        
+        <form>
+            <div class="section">
+                <label>Colaborador</label>
+                <input type="text" placeholder="Digite o nome do colaborador">
+            </div>
+
+            <div class="grid">
+                <div class="section">
+                    <label>Data</label>
+                    <input type="date">
+                </div>
+                <div class="section">
+                    <label>Centro de Custo</label>
+                    <input type="text" placeholder="Digite o centro de custo">
+                </div>
+                <div class="section">
+                    <label>Unidade de Negócio</label>
+                    <input type="text" placeholder="Digite a unidade de negócio">
+                </div>
+            </div>
+
+            <div class="section">
+                <label>Departamento</label>
+                <input type="text" placeholder="Digite o departamento">
+            </div>
+
+            <div class="section">
+                <label>Período Aquisitivo</label>
+                <div class="input-group">
+                    <input type="date" placeholder="Início">
+                    <span>a</span>
+                    <input type="date" placeholder="Fim">
+                </div>
+                <div class="input-group">
+                    <label>Dias de Saldo:</label>
+                    <input type="number" placeholder="Digite o saldo">
+                </div>
+                <div class="input-group">
+                    <label>Limite:</label>
+                    <input type="date" placeholder="Digite a data limite">
+                </div>
+            </div>
+
+            <div class="grid">
+                <div class="section">
+                    <label>Início das Férias</label>
+                    <input type="date">
+                </div>
+                <div class="section">
+                    <label>Final das Férias</label>
+                    <input type="date">
+                </div>
+                <div class="section">
+                    <label>Abono</label>
+                    <input type="number" placeholder="Digite o valor do abono">
+                </div>
+            </div>
+
+            <div class="section">
+                <label>1ª Parc. do 13º Salário</label>
+                <div class="checkbox-group">
+                    <input type="checkbox">
+                    <label>Sim</label>
+                </div>
+            </div>
+
+            <div class="notice">
+                AVISO: Entregue a Carteira de Trabalho e Previdência Social do Funcionário na Adm. de Pessoal para anotações de férias.
+            </div>
+        </form>
+    </div>
+</body>
+</html>
